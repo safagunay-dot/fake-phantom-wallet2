@@ -1,0 +1,42 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Wallet } from "lucide-react";
+
+export default function FakePhantomWallet() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-black text-white p-4 flex flex-col items-center">
+      <div className="w-full max-w-sm mt-10">
+        <Card className="bg-[#1a1a1a] border border-purple-800 rounded-2xl shadow-lg">
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-2">
+                <Wallet className="text-purple-400" />
+                <h1 className="text-xl font-semibold">Phantom Wallet</h1>
+              </div>
+              <Button variant="ghost" className="text-purple-300 hover:text-white">
+                ⚙️
+              </Button>
+            </div>
+
+            <div className="text-center mb-6">
+              <p className="text-sm text-gray-400">Total Balance</p>
+              <p className="text-3xl font-bold text-green-400">
+                $12,345,678.90
+              </p>
+            </div>
+
+            <div className="bg-[#2a2a2a] rounded-xl p-4 text-sm text-gray-300">
+              <p>Account: 4n2k...9vYs</p>
+              <p>Network: Solana Mainnet</p>
+            </div>
+
+            <div className="mt-6 flex gap-4">
+              <Button className="flex-1 bg-purple-700 hover:bg-purple-600">Send</Button>
+              <Button className="flex-1 bg-purple-700 hover:bg-purple-600">Receive</Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}
